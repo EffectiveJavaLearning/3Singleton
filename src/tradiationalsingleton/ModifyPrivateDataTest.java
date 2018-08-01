@@ -16,6 +16,14 @@ import java.lang.reflect.Field;
  * @author LightDance
  */
 public class ModifyPrivateDataTest {
+
+    static class A {
+        private int data = 0;
+        void printData(){
+            System.out.println(data);
+        }
+    }
+
     public static void main(String[] args) {
         A a1 = new A();
         Field[] fields = a1.getClass().getDeclaredFields();
